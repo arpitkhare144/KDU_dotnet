@@ -1,0 +1,76 @@
+#!csharp
+
+/*Program 3
+Write a program to check if the string is a palindrome */
+       
+            string str,revstr="";  
+            // Console.WriteLine(" Enter string");  
+            str="wow";  
+            for (int arpit_i = str.Length-1; arpit_i >=0; arpit_i--) //String Reverse  
+            {  
+                revstr += str[arpit_i];  
+            }  
+            if (revstr == str) // Checking whether string is palindrome or not  
+            {  
+                Console.WriteLine("String is Palindrome \n");  
+            }  
+            else  
+            {  
+                Console.WriteLine("String is not Palindrome \n");  
+            }  
+            // Console.ReadKey();  
+
+#!csharp
+
+/*Program no 1
+Write a program to generate the following series:
+1, 4, 7, 12, 23, 42, 77, ... N
+1, 4, 9, 25, 36, 49, 81, 100, ... N
+1, 5, 13, 29, 49, 77, ... N
+Choose a suitable N in order to display at least 10 terms of the series
+*/
+// 1, 4, 9, 25, 36, 49, 81, 100, ... N
+
+int n=15;
+for(int i=1;i<=n;i++)
+{
+    if(i%4==0)
+    {
+        continue;
+    }
+    Console.WriteLine(Math.Pow(i,2));
+}
+
+#!csharp
+
+/*
+Program 2
+Write a method that takes as a parameter an integer n (n<1000) and print all the
+numbers from 1 to n that are divisible by 3 (Use the test of divisibility).
+*/
+class Program2
+{
+    public static void execute_div(int n)
+    {
+        int sum=0;
+        int temp=n;
+        while(temp!=0)
+        {
+            sum+=temp%10;
+            temp=temp/10;
+        }
+        if(sum%3==0)
+        {
+            Console.WriteLine("the number is divisible by 3\n");
+        }
+        else
+        {
+            Console.WriteLine("the number is not divisible by 3\n");
+        }
+    }
+    public static void Main(string[] args)
+    {
+        execute_div(1377);
+        Console.WriteLine("difjdifjidf\n");
+    }
+}
