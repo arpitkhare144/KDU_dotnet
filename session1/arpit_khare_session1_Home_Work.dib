@@ -113,11 +113,11 @@ Write a program to check if the string is a palindrome */
 string str,revstr="";  
 // Console.WriteLine(" Enter string");  
 str="wow";  
-for (int arpit_i = str.Length-1; arpit_i >=0; arpit_i--) //String Reverse  
+for (int arpit_i = str.Length-1; arpit_i >=0; arpit_i--) 
 {  
     revstr += str[arpit_i];  
 }  
-if (revstr == str) // Checking whether string is palindrome or not  
+if (revstr == str)  
 {  
     Console.WriteLine("String is Palindrome \n");  
 }  
@@ -125,4 +125,3 @@ else
 {  
     Console.WriteLine("String is not Palindrome \n");  
 }  
-// Console.ReadKey();  
