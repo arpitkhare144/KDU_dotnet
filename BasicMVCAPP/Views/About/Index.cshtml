@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BasicMVCAPP.Models.Contributer>
+
+@{
+    ViewData["Title"] = "About Page";
+}
+
+<h1>Contributers</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th> @Html.DisplayNameFor(model => model.name)</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { name=item.name}) |
+                @Html.ActionLink("Details", "Details", new { name=item.name }) |
+                @Html.ActionLink("Delete", "Delete", new {  name=item.name })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
